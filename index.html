@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadBooks</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="index.css" href="index.css">
+</head>
+
+<body class="h-screen">
+    <main class="h-screen flex">
+        <div class="relative w-1/2 bg-[url('./img/biblioteca.jpg')]">
+            <div class="absolute w-full bg-linar-to-b from-[#44444428] to-black h-screen"></div>
+            <h1 class="absolute p-5 py-20 text-6xl text-[#006970] font-bold">ReadBooks</h1>
+        </div>
+        <div class="flex flex-col items-center pt-20 w-1/2">
+            <div class="bg-[#E7E8E9] w-[48%] p-1 rounded-md">
+                <button id="btn-login" class="bg-[#006970] text-white px-15 py-2 rounded-lg">Login</button>
+                <button id="btn-cadastro" class="px-15 py-2 rounded-lg">Criar conta</button>
+            </div>
+            <div class="">
+                <h2 class="text-2xl pt-3">Iniciar sessão</h2>
+                <p>Insira seus dados para acesssar sua estante</p>
+            </div>
+            <form onsubmit="handleLogin(event)" id="form-login" class="py-5 w-[70%]">
+                <div>
+                    <label for="">Email</label>
+                    <input placeholder="email@readblook.com" type="email" name="email" id="emailLogin"
+                        class="w-full border border-[#E7E8E9] p-2 rounded-md mt-2">
+                </div>
+                <div>
+                    <label for="">Senha</label>
+                    <input placeholder="*****" type="password" name="senha" id="senhaLogin"
+                        class="w-full border border-[#E7E8E9] p-2 rounded-md mt-2">
+                </div>
+                <div class="flex justify-between mt-3">
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Mantenha-me logado</label>
+                    </div>
+                    <a href="#esqueceu-senha">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="bg-[#006970] px15 py-2 rounded-lg w-full text-white mt-5">Entrar</button>
+            </form>
+
+            <form onsubmit="handleCadastro(event)" id="form-cadastro" class="hidden">
+                <div>
+                    <label for="">Nome</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="emailCadastro">
+                </div>
+                <div>
+                    <label for="">Senha</label>
+                    <input type="password" name="senha" id="senhaCadastro">
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p class="text-center mt-40"> &copy; Todos os direitos reservados. 2026</p>
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
