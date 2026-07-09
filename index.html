@@ -11,7 +11,7 @@
 
 <body class="h-screen">
     <main class="h-screen flex">
-        <div class="relative w-1/2 bg-[url('./img/biblioteca.jpg')]">
+        <div class="relative w-1/2 bg-[url('./img/biblioteca.jpg')] bg-cover bg-center">
             <div class="absolute w-full bg-linear-to-b from-[rgba(68,68,68,0.16)] to-black h-screen"></div>
             <h1 class="absolute p-5 py-20 text-6xl text-[#006970] font-bold">ReadBooks</h1>
         </div>
@@ -24,15 +24,14 @@
                 <h2 id="titulo-form" class="text-2xl pt-3">Iniciar sessão</h2>
                 <p id="descricao-form">Insira seus dados para acessar sua estante</p>
             </div>
-
             <form onsubmit="handleLogin(event)" id="form-login" class="py-5 w-[70%]">
                 <div>
-                    <label for="email">Email</label>
+                    <label for="emailLogin">Email</label>
                     <input placeholder="email@readbooks.com" type="email" name="email" id="emailLogin"
                         class="w-full border border-[#d9d9db] p-2 rounded-md mt-2">
                 </div>
                 <div id="div-senha">
-                    <label for="senha">Senha</label>
+                    <label for="senhaLogin">Senha</label>
                     <input placeholder="****" type="password" name="senha" id="senhaLogin"
                         class="w-full border border-[#d9d9db] p-2 rounded-md mt-2">
                 </div>
@@ -52,12 +51,12 @@
                         class="w-full border border-[#d9d9db] p-2 rounded-md mt-2">
                 </div>
                 <div>
-                    <label for="email">Email</label>
+                    <label for="emailCadastro">Email</label>
                     <input placeholder="email@readbooks.com" name="email" id="emailCadastro"
                         class="w-full border border-[#d9d9db] p-2 rounded-md mt-2">
                 </div>
                 <div>
-                    <label for="senha">Senha</label>
+                    <label for="senhaCadastro">Senha</label>
                     <input placeholder="Exemplo: 1234" type="password" name="senha" id="senhaCadastro"
                         class="w-full border border-[#d9d9db] p-2 rounded-md mt-2">
                 </div>
@@ -69,5 +68,4 @@
     </main>
     <script src="index.js"></script>
 </body>
-
 </html>

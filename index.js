@@ -33,31 +33,27 @@ function handleLogin(event) {
   const senhaLogin = document.getElementById("senhaLogin").value;
 
   fetch("http://localhost:3000/usuarios")
-  .then(res => res.json())
-  .then(dados => {
-    const usuarios = dados
-    console.log(dados)
-    const usuario = usuarios.find((usuario) => (
-      emailLogin === usuario.email && senhaLogin === usuario.senha
-  ))
+    .then((res) => res.json())
+    .then((dados) => {
+      const usuarios = dados;
+      console.log(dados);
+      const usuario = usuarios.find(
+        (usuario) =>
+          emailLogin === usuario.email && senhaLogin === usuario.senha,
+      );
 
-  if (usuario) {
-    window.location.href = "./dashboard.html";
-  } else {
-    divSenha.removeChild(divSenha.lastChild);
-    const alerta = document.createElement("p");
-    alerta.textContent = "Email ou senha incorretos";
-    alerta.classList.add("text-red-500");
-    divSenha.appendChild(alerta);
-  }
+      if (usuario) {
+        window.location.href = "./dashboard.html";
+      } else {
+        divSenha.removeChild(divSenha.lastChild);
+        const alerta = document.createElement("p");
+        alerta.textContent = "Email ou senha incorretos";
+        alerta.classList.add("text-red-500");
+        divSenha.appendChild(alerta);
+      }
+    })
+    .catch((error) => console.error(error.message));
 }
-)
-.catch(error => console.error(error.message))
-
-}
-
-
-
 
 function handleCadastro(event) {
   event.preventDefault();
