@@ -11,22 +11,23 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <header class="flex items-center justify-between p-5 border-b">
-      <h1 class=" p-5 py-20 text-6xl text-[#006970] font-bold">ReadBooks</h1>
+    <header class="flex items-center justify-between p-5 border-b border-gray-200">  
+      <h1 class=" text-2xl text-[#006970] font-bold">ReadBooks</h1>
       <form onsubmit="getBooks(event)" class="bg-[#f5f5f5] rounded-md w-1/3 flex justify-between">
-        <input class="w-full p-2" placeholder="Buscar por Livro, autor..." type="text" name="busca" id="busca-input">
+        <input class="w-full p-2" type="text" name="busca" id="busca-input" placeholder="Busca por livro, autor..">
         <button class="pr-2" type="submit">
-          <i class="fa-brands fa-sistrix"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
       <span id="span-usuario"></span>
-      <button type="button" onclick="handleLogout()" class="text-[#006970] font-bold" >Sair <i class="fa-solid fa-right-from-bracket"></i></button>
-    </header>
+      <button type="button" onclick="handleLogout()" class="text-[#006970] font-bold">Sair <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </header>
     <main>
-      <section class="grid grid-cols-2 md:grid-cols-4 gap-10 m-20" id="resultado-pesquisa"></section>
-      <section>
-        <h2>Meta de Leitura</h2>
-        <div></div>
+      <section id="resultado-pesquisa" class="grid grid-cols-2 md:grid-cols-4 gap-10 m-20 justify-items-center">
+      </section>
+      <section class="m-30">
+        <h2 class="text-2xl font-bold text-[#006970] mb-5">Meta de Leitura</h2>
+        <div id="div-meta" class="grid grid-cols-7 gap-10"></div>
       </section>
     </main>
     <script src="dashboard.js"></script>

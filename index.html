@@ -12,22 +12,18 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body class="h-screen">
     <main class="h-screen flex">
         <div class="relative w-1/2 bg-[url('./img/biblioteca.jpg')] bg-cover bg-center">
             <div class="absolute w-full bg-linear-to-b from-[rgba(68,68,68,0.16)] to-black h-screen"></div>
             <h1 class="absolute p-5 py-20 text-6xl text-[#006970] font-bold">ReadBooks</h1>
         </div>
-        <div class="flex flex-col items-center pt-20 w-1/2">
-            <<span id="span-loading" class="animate__animated animate__rotateIn animate__infinite">
-                <i class="fa-solid fa-spinner text-4xl"></i>
-            </span>
-            <div></div>
-            <div class="bg-[#E7E8E9] w-[48%] p-1 rounded-md">
+        <span id="span-loading" class="hidden absolute right-90 bottom-100 animate__animated animate__rotateOut animate__infinite"><i  class="fa-solid fa-spinner text-4xl"></i></span>
+        <div id="div-login" class="flex flex-col items-center pt-20 w-1/2">
+            <div class="bg-[#E7E8E9] w-[52%] p-1 rounded-md">
                 <button id="btn-login" class="bg-[#006970] text-white px-15 py-2 rounded-lg">Login</button>
                 <button id="btn-cadastro" class="px-15 py-2 rounded-lg">Criar conta</button>
-            </div>
+        </div>
             <div class="w-[70%]">
                 <h2 id="titulo-form" class="text-2xl pt-3">Iniciar sessão</h2>
                 <p id="descricao-form">Insira seus dados para acessar sua estante</p>
@@ -73,7 +69,7 @@
             </form>
             <p class="text-center mt-40"> &copy; Todos os direitos reservados. 2026</p>
         </div>
-        <div id="div-alert" class="absolute bg-amber-200 py-8 px-5 rounded-2xl bottom-5 right-5 border-4 border-amber-300"></div>
+        <div id="div-alert" class="hidden absolute bg-amber-200 py-8 px-5 rounded-2xl bottom-5 right-5 border-4 border-amber-300"></div>
     </main>
     <script src="index.js"></script>
 </body>

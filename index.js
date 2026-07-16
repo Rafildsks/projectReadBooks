@@ -1,4 +1,4 @@
-const usuarioAutenticado = localStorage.getItem("usarioLogado")
+const usuarioAutenticado = localStorage.getItem("usuarioLogado")
 const btnLogin = document.getElementById("btn-login");
 const btnCadastro = document.getElementById("btn-cadastro");
 const formLogin = document.getElementById("form-login");
@@ -38,9 +38,13 @@ btnLogin.addEventListener("click", () => {
 });
 
 function handleLogin(event) {
+  divLogin.classList.add("hidden");
+  spanLoading.classList.remove("hidden");
   event.preventDefault();
   const emailLogin = document.getElementById("emailLogin").value;
   const senhaLogin = document.getElementById("senhaLogin").value;
+
+
 
   fetch("http://localhost:3000/usuarios")
     .then((res) => res.json())
@@ -73,11 +77,10 @@ function handleLogin(event) {
       divLogin.classList.remove("hidden")
       spanLoading.classList.add("hidden")
       setTimeout(() => {
-        divAlert.classList.add("hiddem")
+        divAlert.classList.add("hidden")
       }, 3000)
     });
 
-  
 }
 
 function handleCadastro(event) {
